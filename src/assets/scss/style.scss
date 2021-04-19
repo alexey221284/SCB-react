@@ -1,0 +1,111 @@
+@import "reset";
+@import "_modal";
+$root: 'wrapper';
+$height-header: 40px;
+
+.#{$root} {
+    display: flex;
+    flex: 1 100%;
+    flex-direction: column;
+    max-width: 1024px;
+    margin: 0 auto;
+    .logo {
+        font-size: 50px;
+    }
+}
+
+.header {
+    background-color: navy;
+    height: $height-header;
+    padding: 15px;
+    .left-text {
+        float: left;
+    }
+    .right-text {
+        float: right;
+    }
+    clear: both;
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 23px;
+    }
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #e4e4e4;
+    padding: 15px;
+    color: black;
+
+    & > * {
+        margin: 15px;
+    }
+    .left--aside {
+        flex: 1 auto;
+        text-align: center;
+
+        .checkboxs {
+            width: 90%;
+            margin: auto;
+            text-align: left;
+            label {
+                display: block;
+            }
+        }
+    }
+    .content {
+        flex: 10 50%;
+        text-align: center;
+        &--list {
+            li {
+                display: flex;
+                flex: 1 100%;
+                padding: 2px;
+                margin: 2px;
+                background: #f3f3f3;
+                align-items: center;
+
+                & > * {
+                    margin-right: 5px;
+                }
+
+                .wrap {
+                    display: flex;
+                    flex: 1 100%;
+                    align-items: center;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #b5c8e8;
+                    }
+                }
+                h3 {
+                    flex: 1;
+                    font-size: 17px;
+                    font-weight: bold;
+                }
+                span {
+                    flex: 1;
+                    color: grey;
+                }
+                img {
+                    flex: 0.5;
+                    width: 96px;
+                    height: 64px;
+                }
+                i {
+                    font-size: 30px;
+                }
+                .favourite {
+                    color: #f1940c;
+                }
+                .not-favourite {
+                    color: black;
+                }
+            }
+        }
+    }
+}
