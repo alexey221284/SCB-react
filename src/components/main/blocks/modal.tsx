@@ -16,3 +16,4 @@ const Modal = (props: any) => {
     );
 }
 export default Modal;
+
